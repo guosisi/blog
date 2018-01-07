@@ -1,0 +1,30 @@
+<%- include ../include/header.html%>
+<div class="row">
+ <div class="col-md-6 col-md-offset-3">
+  <form method="post" role="form" class="form-horizontal">
+   <div class="form-group">
+    <label for="title" class="control-label col-md-3">标题</label>
+    <div class="col-md-9">
+     <input type="text" id="title" name="title" class="form-control" value="<%= article.title%>">
+    </div>
+   </div>
+   <div class="form-group">
+    <label for="content" class="control-label col-md-3">正文</label>
+    <div class="col-md-9">
+     <textarea name="content" id="content" class="form-control" cols="30" rows="10">
+      <%= article.content%>
+     </textarea>
+    </div>
+   </div>
+
+   <div class="form-group">
+    <div class="col-md-offset-3 col-md-9">
+     <button class="btn btn-primary" type="submit">发表</button>
+    </div>
+   </div>
+
+  </form>
+ </div>
+</div>
+
+<%- include ../include/footer.html%>

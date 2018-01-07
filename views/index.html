@@ -1,0 +1,18 @@
+<%- include include/header.html%>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <% items.forEach(function(item){%>
+        <div class="media">
+            <a class="media-left" href="#">
+                <img class="img-rounded" src="<%=item.user.avatar%>" alt="">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading"><a href="/article/detail/<%=item._id%>"><%=item.title%></a></h4>
+                <p><%=item.content%></p>
+            </div>
+        </div>
+        <% });%>
+
+    </div>
+</div>
+<%- include include/footer.html%>
